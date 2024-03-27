@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:id="@+id/main">
+
+    <!-- Header -->
+    <include layout="@layout/header_layout" />
+
+    <!-- Shop Categories -->
+    <TextView
+        android:id="@+id/textViewCategories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Browse Shops by Category"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        android:layout_below="@id/header"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Horizontal RecyclerView for Shop Categories -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewCategories"
+        android:layout_marginTop="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:orientation="horizontal"
+        android:scrollbars="none"
+        android:background="@color/transparent" />
+
+    <!-- Nearby Shops Section -->
+    <TextView
+        android:id="@+id/textViewNearbyShops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nearby Shops"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        android:layout_below="@id/recyclerViewCategories"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Vertical RecyclerView for Nearby Shops -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewNearbyShops"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewNearbyShops"
+        android:layout_marginTop="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:scrollbars="vertical"
+        android:background="@color/transparent" />
+
+</RelativeLayout>
